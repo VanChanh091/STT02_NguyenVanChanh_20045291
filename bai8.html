@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+        var calcTip = (valueOfBill) => {
+            if(valueOfBill >= 50 && valueOfBill <= 300){
+                return valueOfBill * (15/100);
+            }else{
+                return valueOfBill * (20/100);
+            }
+        };  
+
+        var bills = [22, 295, 176, 440, 37, 105, 10, 1100, 86, 52];
+
+        var tips = [];
+        var totals = [];
+
+        for(var i=0; i<bills.length; i++){
+            var bill = bills[i];
+            var tip = calcTip(bill);
+            tips.push(tip);
+            totals.push(bill + tip);
+        }
+
+        console.log("Tiền boa:", tips);
+        console.log("Tổng số:", totals);
+
+        // BONUS 1
+        var tong=0;
+        for(var i=0; i<bills.length; i++){
+            tong += totals[i];
+        }
+
+        var avg = tong/bills.length;
+
+        console.log("Tong bill: " + tong);
+        console.log("So luong phan tu: " + bills.length);
+        console.log("Gia tri trung binh cua mang: " + avg);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

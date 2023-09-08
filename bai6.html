@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+        var calcTip = (valueOfBill) => {
+            if(valueOfBill >= 50 && valueOfBill <= 300){
+                return valueOfBill * (15/100);
+            }else{
+                return valueOfBill * (20/100);
+            }
+        };
+
+        var bills = [125, 555, 44];
+
+        var tips = [];
+        var totals = [];
+
+        for(var i=0; i<bills.length; i++){
+            var bill = bills[i];
+            var tip = calcTip(bill);
+            tips.push(tip);
+            totals.push(bill + tip);
+        }
+
+        console.log("Tiền boa:", tips);
+        console.log("Tổng số:", totals);
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

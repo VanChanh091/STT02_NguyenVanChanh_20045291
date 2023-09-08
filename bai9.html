@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+        var printForecast = (arr) => {
+            var printArray = "";
+            for(var i=0; i<arr.length; i++){
+                printArray += `... ${arr[i]}°C in ${i + 1} day`;
+            }
+            console.log(printArray);
+        }
+        
+        var temperatures = [17, 21, 23];
+
+        console.log(printForecast(temperatures));
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

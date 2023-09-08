@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+        var tip = (valueOfBill) => {
+            if(valueOfBill >= 50 && valueOfBill <= 300){
+                return valueOfBill * (15/100);
+            }else{
+                return valueOfBill * (20/100);
+            }
+        };
+        
+        var billA = 275
+        var a = tip(billA);
+        console.log(`The bill was 275, the tip was ${a.toFixed(2)}, and the total value ${billA + a}`);
+
+        var billB = 40
+        var b = tip(billB);
+        console.log(`The bill was 40, the tip was ${a.toFixed(2)}, and the total value ${billB + b}`);
+
+        var billC = 430
+        var c = tip(billC);
+        console.log(`The bill was 430, the tip was ${a.toFixed(2)}, and the total value ${billC + c}`);
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

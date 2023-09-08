@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+        var avg = (a,b,c) => {
+            return (a+b+c)/3;
+        }
+
+        var checkWinner = (teamA, teamB) => {
+            if(teamA > teamB*2){
+                return teamA;
+            }else if(teamB > teamA*2){
+                return teamB;
+            }else{
+                return 0;
+            }
+        }
+
+        // var dolphins_1 = avg(44, 23, 71);
+        var dolphins_1 = avg(1,1,1)
+        console.log(dolphins_1.toFixed(2));
+
+        var dolphins_2 = avg(85, 54, 41);
+        console.log(dolphins_2.toFixed(2));
+
+        var koalas_1 = avg(65, 54, 49);
+        console.log(koalas_1.toFixed(2));
+
+        var koalas_2 = avg(23, 24, 27);
+        console.log(koalas_2.toFixed(2));
+
+        console.log(checkWinner(dolphins_1, koalas_1));
+
+        if(checkWinner(dolphins_1, koalas_1)){
+            console.log(`Dolphins_1 win (${dolphins_1} vs ${koalas_1})`);
+        }else if(checkWinner(dolphins_1, koalas_1)){
+            console.log(`Koalas_1 win (${dolphins_1} vs ${koalas_1})`);
+        }else{
+            console.log(`No team win (${dolphins_1} vs ${koalas_1})`);
+        }
+        
+        if(checkWinner(dolphins_2, koalas_2)){
+            console.log(`Dolphins_2 win (${dolphins_2} vs ${koalas_2.toFixed(2)})`);
+        }else if(checkWinner(dolphins_2, koalas_2)){
+            console.log(`Koalas_2 win (${dolphins_2} vs ${koalas_2.toFixed(2)})`);
+        }else{
+            console.log(`No team win`);
+        }
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
